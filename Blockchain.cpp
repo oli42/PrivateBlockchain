@@ -28,7 +28,7 @@ std::string Blockchain::addBlock(Transaction data){
     chain.push_back(newBlock);
 
     std::cout << "new block hash = " << newBlock.getHash() << std::endl;
-    
+
     std::stringstream ss;
     ss << newBlock.getHash();
     std::string other = ss.str();
@@ -58,7 +58,7 @@ std::string Blockchain::intro(){
 
     std::string i;
         std::cout << " " << std::endl;
-        std::cout << "What can of operation would you like to proceed to? Press a number." << std::endl;
+        std::cout << "What can of operation would you like to proceed to? Press a number then Enter." << std::endl;
         std::cout << "1: Operate a new transaction" << std::endl;
         std::cout << "2: Checking a transaction" << std::endl;
         std::cout << "3: Checking the integrity of the Blockchain" << std::endl;

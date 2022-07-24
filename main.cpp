@@ -11,6 +11,12 @@ int main(){
         std::string i = yo.intro();
 
         if (!i.compare("1")){
+            if (yo._corrupted){
+                std::cout << "**************************************************" << std::endl;
+                std::cout << "The chain has been corrupted, you can't do any transaction till further notice." << std::endl;
+                std::cout << "**************************************************" << std::endl;
+                continue;
+            }
             time_t data1Time;
             std::string recName;
             std::string sName;
@@ -81,6 +87,7 @@ int main(){
         else if (!i.compare("4")){
             Block* b = yo.getLatestBlock();
             b->data._amount = 88888;
+            yo._corrupted = true;
             std::cout << "The Blockchain has just been corrupt. You can check if you want." << std::endl;
 
         }

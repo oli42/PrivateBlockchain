@@ -8,6 +8,7 @@ class Blockchain{
 
     public:
     std::vector<Block> chain;
+    bool _corrupted; // a passer private
 
     Blockchain();
     std::string addBlock(Transaction data);
